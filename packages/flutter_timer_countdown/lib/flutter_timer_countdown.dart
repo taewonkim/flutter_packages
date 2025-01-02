@@ -184,22 +184,35 @@ class _TimerCountdownState extends State<TimerCountdown> {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
-          countdownDays,
-          style: widget.timeTextStyle,
+        Text.rich(
+          TextSpan(
+            text: countdownDays,
+            style: widget.timeTextStyle,
+            children: [
+              if (widget.enableDescriptions)
+              TextSpan(
+                text: widget.daysDescription,
+                style: widget.descriptionTextStyle,
+              ),
+            ]
+          )
         ),
+        // Text(
+        //   countdownDays,
+        //   style: widget.timeTextStyle,
+        // ),
+        // if (widget.enableDescriptions)
+        //   SizedBox(
+        //     width: 5,
+        //   ),
+        // if (widget.enableDescriptions)
+        //   Text(
+        //     widget.daysDescription,
+        //     style: widget.descriptionTextStyle,
+        //   ),
         if (widget.enableDescriptions)
           SizedBox(
             width: 5,
-          ),
-        if (widget.enableDescriptions)
-          Text(
-            widget.daysDescription,
-            style: widget.descriptionTextStyle,
-          ),
-        if (widget.enableDescriptions)
-          SizedBox(
-            width: 10,
           ),
       ],
     );
