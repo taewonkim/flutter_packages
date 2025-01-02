@@ -197,6 +197,10 @@ class _TimerCountdownState extends State<TimerCountdown> {
             widget.daysDescription,
             style: widget.descriptionTextStyle,
           ),
+        if (widget.enableDescriptions)
+          SizedBox(
+            width: 10,
+          ),
       ],
     );
   }
@@ -348,7 +352,7 @@ class _TimerCountdownState extends State<TimerCountdown> {
           mainAxisSize: MainAxisSize.min,
           children: [
             _days(context),
-            _colon(),
+            // _colon(),
             _hours(context),
             _colon(),
             _minutes(context),
