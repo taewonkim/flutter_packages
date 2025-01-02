@@ -160,15 +160,15 @@ class _TimerCountdownState extends State<TimerCountdown> {
               ":",
               style: widget.colonsTextStyle,
             ),
-            if (widget.enableDescriptions)
-              SizedBox(
-                height: 5,
-              ),
-            if (widget.enableDescriptions)
-              Text(
-                "",
-                style: widget.descriptionTextStyle,
-              ),
+            // if (widget.enableDescriptions)
+            //   SizedBox(
+            //     height: 5,
+            //   ),
+            // if (widget.enableDescriptions)
+            //   Text(
+            //     "",
+            //     style: widget.descriptionTextStyle,
+            //   ),
           ],
         ),
         SizedBox(
@@ -180,7 +180,7 @@ class _TimerCountdownState extends State<TimerCountdown> {
 
   /// Builds the timer days with its description.
   Widget _days(BuildContext context) {
-    return Column(
+    return Row(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -190,7 +190,7 @@ class _TimerCountdownState extends State<TimerCountdown> {
         ),
         if (widget.enableDescriptions)
           SizedBox(
-            height: 5,
+            width: 5,
           ),
         if (widget.enableDescriptions)
           Text(
@@ -203,7 +203,7 @@ class _TimerCountdownState extends State<TimerCountdown> {
 
   /// Builds the timer hours with its description.
   Widget _hours(BuildContext context) {
-    return Column(
+    return Row(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -211,22 +211,22 @@ class _TimerCountdownState extends State<TimerCountdown> {
           countdownHours,
           style: widget.timeTextStyle,
         ),
-        if (widget.enableDescriptions)
-          SizedBox(
-            height: 5,
-          ),
-        if (widget.enableDescriptions)
-          Text(
-            widget.hoursDescription,
-            style: widget.descriptionTextStyle,
-          ),
+        // if (widget.enableDescriptions)
+        //   SizedBox(
+        //     height: 5,
+        //   ),
+        // if (widget.enableDescriptions)
+        //   Text(
+        //     widget.hoursDescription,
+        //     style: widget.descriptionTextStyle,
+        //   ),
       ],
     );
   }
 
   /// Builds the timer minutes with its description.
   Widget _minutes(BuildContext context) {
-    return Column(
+    return Row(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -234,22 +234,22 @@ class _TimerCountdownState extends State<TimerCountdown> {
           countdownMinutes,
           style: widget.timeTextStyle,
         ),
-        if (widget.enableDescriptions)
-          SizedBox(
-            height: 5,
-          ),
-        if (widget.enableDescriptions)
-          Text(
-            widget.minutesDescription,
-            style: widget.descriptionTextStyle,
-          ),
+        // if (widget.enableDescriptions)
+        //   SizedBox(
+        //     height: 5,
+        //   ),
+        // if (widget.enableDescriptions)
+        //   Text(
+        //     widget.minutesDescription,
+        //     style: widget.descriptionTextStyle,
+        //   ),
       ],
     );
   }
 
   /// Builds the timer seconds with its description.
   Widget _seconds(BuildContext context) {
-    return Column(
+    return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -257,15 +257,15 @@ class _TimerCountdownState extends State<TimerCountdown> {
           countdownSeconds,
           style: widget.timeTextStyle,
         ),
-        if (widget.enableDescriptions)
-          SizedBox(
-            height: 5,
-          ),
-        if (widget.enableDescriptions)
-          Text(
-            widget.secondsDescription,
-            style: widget.descriptionTextStyle,
-          ),
+        // if (widget.enableDescriptions)
+        //   SizedBox(
+        //     height: 5,
+        //   ),
+        // if (widget.enableDescriptions)
+        //   Text(
+        //     widget.secondsDescription,
+        //     style: widget.descriptionTextStyle,
+        //   ),
       ],
     );
   }
