@@ -152,7 +152,7 @@ class _TimerCountdownState extends State<TimerCountdown> {
         SizedBox(
           width: widget.spacerWidth,
         ),
-        Column(
+        Row(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
